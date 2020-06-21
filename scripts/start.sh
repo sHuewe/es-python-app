@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python -u /scripts/waitForES.py
+python -u /es_python_app_scripts/waitForES.py
 "$@"

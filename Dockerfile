@@ -1,6 +1,7 @@
-FROM python:3.8
+ARG PYTHON_IMAGE=python:3.8
+FROM $PYTHON_IMAGE
 
-COPY scripts scripts
+COPY scripts es_python_app_scripts
 RUN python -m pip install elasticsearch
 
-ENTRYPOINT ["bash","/scripts/start.sh"]
+ENTRYPOINT ["bash","/es_python_app_scripts/start.sh"]
